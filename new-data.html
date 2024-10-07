@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Data - Concussion Management</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif, sans-serif;
+            background-color: #002664;
+            color: white;
+            margin: 0;
+            padding: 10px;
+            font-size: 12px;
+        }
+
+        .container {
+            max-width: 100%;
+            margin: 0;
+            text-align: left;
+        }
+
+        .logo-container {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-container img {
+            max-width: 200px;
+            max-height: 200px;
+            object-fit: contain;
+        }
+
+        h1 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 14px;
+            text-decoration: underline;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+        .data-row {
+            margin-bottom: 2px;
+        }
+
+        .label {
+            display: inline-block;
+            width: 250px;
+            vertical-align: top;
+        }
+
+        .value,
+        input,
+        select,
+        textarea {
+            display: inline-block;
+            vertical-align: top;
+            width: calc(100% - 260px);
+            max-width: 300px;
+        }
+
+        input,
+        select,
+        textarea {
+            background-color: white;
+            color: #002664;
+            border: none;
+            padding: 2px 5px;
+        }
+
+        textarea {
+            height: 60px;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .button,
+        button {
+            display: inline-block;
+            padding: 5px 10px;
+            background-color: white;
+            color: #002664;
+            text-decoration: none;
+            border-radius: 3px;
+            font-size: 12px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover,
+        .button:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo-container">
+            <img src="/webpage/kentk.png" alt="Kent State Stark Football Logo">
+        </div>
+        <h1>New Data - Concussion Management</h1>
+        <form id="concussionForm">
+            <h2>Impact Data</h2>
+            <div class="data-row"><span class="label">Impact ID:</span><input type="text" id="impactId" name="impactId"
+                    required></div>
+            <div class="data-row"><span class="label">Player involved:</span><input type="text" id="playerInvolved"
+                    name="playerInvolved" required></div>
+            <div class="data-row"><span class="label">Location on field (yard line):</span><input type="text"
+                    id="location" name="location" required></div>
+            <div class="data-row"><span class="label">Type of play:</span><input type="text" id="typeOfPlay"
+                    name="typeOfPlay" required></div>
+            <div class="data-row"><span class="label">Force of impact (if measurable):</span><input type="text"
+                    id="forceOfImpact" name="forceOfImpact"></div>
+            <div class="data-row"><span class="label">Part of body/head impacted:</span><input type="text"
+                    id="bodyPartImpacted" name="bodyPartImpacted" required></div>
+            <div class="data-row"><span class="label">Helmet data (type, fit, condition):</span><input type="text"
+                    id="helmetData" name="helmetData" required></div>
+
+            <h2>Concussion Incident</h2>
+            <div class="data-row"><span class="label">Incident ID:</span><input type="text" id="incidentId"
+                    name="incidentId" required></div>
+            <div class="data-row"><span class="label">Date and time of incident:</span><input type="datetime-local"
+                    id="dateTime" name="dateTime" required></div>
+            <div class="data-row"><span class="label">Immediate symptoms observed:</span><input type="text"
+                    id="symptoms" name="symptoms" required></div>
+            <div class="data-row"><span class="label">Sideline assessment results:</span><input type="text"
+                    id="sidelineAssessment" name="sidelineAssessment" required></div>
+            <div class="data-row"><span class="label">Diagnosis:</span><input type="text" id="diagnosis"
+                    name="diagnosis" required></div>
+
+            <h2>Medical Assessments</h2>
+            <div class="data-row"><span class="label">Assessment ID:</span><input type="text" id="assessmentId"
+                    name="assessmentId" required></div>
+            <div class="data-row"><span class="label">Type of assessment:</span><input type="text" id="assessmentType"
+                    name="assessmentType" required></div>
+            <div class="data-row"><span class="label">Date performed:</span><input type="date" id="assessmentDate"
+                    name="assessmentDate" required></div>
+            <div class="data-row"><span class="label">Results:</span><input type="text" id="assessmentResults"
+                    name="assessmentResults" required></div>
+            <div class="data-row"><span class="label">Comparison to baseline tests:</span><input type="text"
+                    id="baselineComparison" name="baselineComparison" required></div>
+
+            <h2>Recovery and Return-to-Play</h2>
+            <div class="data-row"><span class="label">Recovery plan ID:</span><input type="text" id="recoveryPlanId"
+                    name="recoveryPlanId" required></div>
+            <div class="data-row"><span class="label">Prescribed rest period:</span><input type="text" id="restPeriod"
+                    name="restPeriod" required></div>
+            <div class="data-row"><span class="label">Gradual return-to-play protocol stages:</span><textarea
+                    id="protocolStages" name="protocolStages" required></textarea></div>
+            <div class="data-row"><span class="label">Clearance dates for each stage:</span><input type="text"
+                    id="clearanceDates" name="clearanceDates" required></div>
+            <div class="data-row"><span class="label">Final medical clearance date:</span><input type="date"
+                    id="finalClearanceDate" name="finalClearanceDate" required></div>
+
+            <div class="button-container">
+                <button type="submit">Submit Data</button>
+            </div>
+        </form>
+        <div id="message"></div>
+        <div class="button-container">
+            <a href="index.html" class="button">Back to Home</a>
+            <a href="previous-data.html" class="button">View All Data</a>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('concussionForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData.entries());
+            // Save to localStorage
+            let concussionData = JSON.parse(localStorage.getItem('concussionData')) || [];
+            concussionData.push(data);
+            localStorage.setItem('concussionData', JSON.stringify(concussionData));
+            // Log to console for debugging
+            console.log('Data saved to localStorage:', data);
+            // Send data to server (if server-side functionality is implemented)
+            fetch('submit-data.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data)
+            })
+                .then(response => response.json())
+                .then(result => {
+                    if (result.success) {
+                        document.getElementById('message').textContent = 'Data submitted successfully!';
+                        this.reset();
+                    } else {
+                        document.getElementById('message').textContent = 'Error submitting data to server. Data saved locally.';
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    document.getElementById('message').textContent = 'An error occurred. Data saved locally.';
+                });
+            // Redirect to previous-data.html after submission
+            window.location.href = 'previous-data.html';
+        });
+    </script>
