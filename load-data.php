@@ -15,8 +15,8 @@ if (file_exists($dataFile)) {
             
             // Impact Data
             echo "<h2>Impact Data</h2>";
-            echo "<div class='data-row'><span class='label'>Impact ID:</span><span class='value'>" . htmlspecialchars($entry['impactId']) . "</span></div>";
-            echo "<div class='data-row'><span class='label'>Player involved:</span><span class='value'>" . htmlspecialchars($entry['playerInvolved']) . "</span></div>";
+            echo "<div class='data-row'><span class='label'>Concussion ID:</span><span class='value'>" . htmlspecialchars($entry['concussionId']) . "</span></div>";
+            echo "<div class='data-row'><span class='label'>Player ID:</span><span class='value'>" . htmlspecialchars($entry['playerID']) . "</span></div>";
             echo "<div class='data-row'><span class='label'>Location on field:</span><span class='value'>" . htmlspecialchars($entry['location']) . "</span></div>";
             echo "<div class='data-row'><span class='label'>Type of play:</span><span class='value'>" . htmlspecialchars($entry['typeOfPlay']) . "</span></div>";
             echo "<div class='data-row'><span class='label'>Force of impact:</span><span class='value'>" . htmlspecialchars($entry['forceOfImpact']) . "</span></div>";
@@ -25,7 +25,8 @@ if (file_exists($dataFile)) {
 
             // Concussion Incident
             echo "<h2>Concussion Incident</h2>";
-            echo "<div class='data-row'><span class='label'>Incident ID:</span><span class='value'>" . htmlspecialchars($entry['incidentId']) . "</span></div>";
+            echo "<div class='data-row'><span class='label'>Concussion ID:</span><span class='value'>" . htmlspecialchars($entry['concussionId']) . "</span></div>";
+            echo "<div class='data-row'><span class='label'>Player ID:</span><span class='value'>" . htmlspecialchars($entry['playerID']) . "</span></div>";
             echo "<div class='data-row'><span class='label'>Date and time:</span><span class='value'>" . htmlspecialchars($entry['dateTime']) . "</span></div>";
             echo "<div class='data-row'><span class='label'>Symptoms:</span><span class='value'>" . htmlspecialchars($entry['symptoms']) . "</span></div>";
             echo "<div class='data-row'><span class='label'>Sideline assessment:</span><span class='value'>" . htmlspecialchars($entry['sidelineAssessment']) . "</span></div>";
@@ -33,7 +34,8 @@ if (file_exists($dataFile)) {
 
             // Medical Assessments
             echo "<h2>Medical Assessments</h2>";
-            echo "<div class='data-row'><span class='label'>Assessment ID:</span><span class='value'>" . htmlspecialchars($entry['assessmentId']) . "</span></div>";
+            echo "<div class='data-row'><span class='label'>Concussion ID:</span><span class='value'>" . htmlspecialchars($entry['concussionId']) . "</span></div>";
+            echo "<div class='data-row'><span class='label'>Player ID:</span><span class='value'>" . htmlspecialchars($entry['playerID']) . "</span></div>";
             echo "<div class='data-row'><span class='label'>Type of assessment:</span><span class='value'>" . htmlspecialchars($entry['assessmentType']) . "</span></div>";
             echo "<div class='data-row'><span class='label'>Date performed:</span><span class='value'>" . htmlspecialchars($entry['assessmentDate']) . "</span></div>";
             echo "<div class='data-row'><span class='label'>Results:</span><span class='value'>" . htmlspecialchars($entry['assessmentResults']) . "</span></div>";
@@ -41,7 +43,8 @@ if (file_exists($dataFile)) {
 
             // Recovery and Return-to-Play
             echo "<h2>Recovery and Return-to-Play</h2>";
-            echo "<div class='data-row'><span class='label'>Recovery plan ID:</span><span class='value'>" . htmlspecialchars($entry['recoveryPlanId']) . "</span></div>";
+            echo "<div class='data-row'><span class='label'>Concussion ID:</span><span class='value'>" . htmlspecialchars($entry['concussionId']) . "</span></div>";
+            echo "<div class='data-row'><span class='label'>Player ID:</span><span class='value'>" . htmlspecialchars($entry['playerID']) . "</span></div>";
             echo "<div class='data-row'><span class='label'>Prescribed rest period:</span><span class='value'>" . htmlspecialchars($entry['restPeriod']) . "</span></div>";
             echo "<div class='data-row'><span class='label'>Protocol stages:</span><span class='value'>" . htmlspecialchars($entry['protocolStages']) . "</span></div>";
             echo "<div class='data-row'><span class='label'>Clearance dates:</span><span class='value'>" . htmlspecialchars($entry['clearanceDates']) . "</span></div>";
